@@ -14,7 +14,7 @@ if is_prod:
     print('production')
 else:
     print('development')
-    #file_name = "../../api_keys.json"
+    file_name = "../../../api_keys.json"
     data = json.load(open(file_name))
     consumer_key = data['twitter_consumer_key']
     consumer_secret = data['twitter_consumer_secret']
@@ -35,8 +35,8 @@ def TweetOut(tweet_number):
         "Live, from Heroku! Can't stop. Won't stop. This is Tweet #%s!" %
         tweet_number)
 
-counter = 0
-for x in range(3):
+counter = 3
+for x in range(5):
 # Call the TweetQuotes function and specify the tweet number
     TweetOut(counter)
 
